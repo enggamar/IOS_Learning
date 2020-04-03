@@ -3,19 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03FFE08B657B1714100EF507 /* Pods_ZippSlipShadow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D76AA8BDC488D9005CDAA06 /* Pods_ZippSlipShadow.framework */; };
+		933678F724334A2300337432 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933678F624334A2300337432 /* LoginResponseModel.swift */; };
+		933678F924334E6400337432 /* BaseResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933678F824334E6400337432 /* BaseResonse.swift */; };
+		933678FE24334F9B00337432 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933678FD24334F9B00337432 /* LoginData.swift */; };
+		933679012433519F00337432 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933679002433519F00337432 /* Users.swift */; };
+		933679032433554500337432 /* DistrictInstitutionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933679022433554500337432 /* DistrictInstitutionModel.swift */; };
+		933B5332242FCE5A004BF168 /* ForgotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933B5331242FCE5A004BF168 /* ForgotController.swift */; };
 		93412C35242B9A910025B4B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93412C34242B9A910025B4B4 /* AppDelegate.swift */; };
 		93412C37242B9A910025B4B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93412C36242B9A910025B4B4 /* SceneDelegate.swift */; };
 		93412C39242B9A910025B4B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93412C38242B9A910025B4B4 /* ViewController.swift */; };
 		93412C3C242B9A910025B4B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93412C3A242B9A910025B4B4 /* Main.storyboard */; };
 		93412C3E242B9A960025B4B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93412C3D242B9A960025B4B4 /* Assets.xcassets */; };
 		93412C41242B9A960025B4B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93412C3F242B9A960025B4B4 /* LaunchScreen.storyboard */; };
+		93412C4C242BBF2E0025B4B4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93412C4B242BBF2E0025B4B4 /* LoginController.swift */; };
+		93B687DF24335E8900471A14 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687DE24335E8900471A14 /* NetworkManager.swift */; };
+		93B687E124335FD400471A14 /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E024335FD400471A14 /* ServiceResponse.swift */; };
+		93B687E32433628500471A14 /* Constent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E22433628500471A14 /* Constent.swift */; };
+		93B687E62433BDD400471A14 /* ProgressUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E52433BDD400471A14 /* ProgressUtil.swift */; };
+		93B687E824346C1800471A14 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E724346C1800471A14 /* HomeController.swift */; };
+		93B687EA2436707800471A14 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E92436707800471A14 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D76AA8BDC488D9005CDAA06 /* Pods_ZippSlipShadow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZippSlipShadow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		933678F624334A2300337432 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		933678F824334E6400337432 /* BaseResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResonse.swift; sourceTree = "<group>"; };
+		933678FD24334F9B00337432 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		933679002433519F00337432 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		933679022433554500337432 /* DistrictInstitutionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictInstitutionModel.swift; sourceTree = "<group>"; };
+		933B5331242FCE5A004BF168 /* ForgotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotController.swift; sourceTree = "<group>"; };
 		93412C31242B9A910025B4B4 /* ZippSlipShadow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZippSlipShadow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93412C34242B9A910025B4B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93412C36242B9A910025B4B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +45,15 @@
 		93412C3D242B9A960025B4B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93412C40242B9A960025B4B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93412C42242B9A960025B4B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93412C4B242BBF2E0025B4B4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		93B687DE24335E8900471A14 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		93B687E024335FD400471A14 /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		93B687E22433628500471A14 /* Constent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constent.swift; sourceTree = "<group>"; };
+		93B687E52433BDD400471A14 /* ProgressUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUtil.swift; sourceTree = "<group>"; };
+		93B687E724346C1800471A14 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		93B687E92436707800471A14 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		94917F41F9A084CC28A7B082 /* Pods-ZippSlipShadow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZippSlipShadow.release.xcconfig"; path = "Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow.release.xcconfig"; sourceTree = "<group>"; };
+		AACE85A85EF4F83E9F080118 /* Pods-ZippSlipShadow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZippSlipShadow.debug.xcconfig"; path = "Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FFE08B657B1714100EF507 /* Pods_ZippSlipShadow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A02CED03A982C6565EB8E57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AACE85A85EF4F83E9F080118 /* Pods-ZippSlipShadow.debug.xcconfig */,
+				94917F41F9A084CC28A7B082 /* Pods-ZippSlipShadow.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		933678FC24334F7300337432 /* LoginResponse */ = {
+			isa = PBXGroup;
+			children = (
+				933678F624334A2300337432 /* LoginResponseModel.swift */,
+				933678FD24334F9B00337432 /* LoginData.swift */,
+				933679002433519F00337432 /* Users.swift */,
+				933679022433554500337432 /* DistrictInstitutionModel.swift */,
+			);
+			path = LoginResponse;
+			sourceTree = "<group>";
+		};
 		93412C28242B9A910025B4B4 = {
 			isa = PBXGroup;
 			children = (
 				93412C33242B9A910025B4B4 /* ZippSlipShadow */,
 				93412C32242B9A910025B4B4 /* Products */,
+				7A02CED03A982C6565EB8E57 /* Pods */,
+				BFAF7D56CD99F9900F789C43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +109,73 @@
 		93412C33242B9A910025B4B4 /* ZippSlipShadow */ = {
 			isa = PBXGroup;
 			children = (
+				93B687E424337E1700471A14 /* utils */,
+				93B687DD24335CE700471A14 /* API */,
+				93412C49242BBEED0025B4B4 /* Model */,
+				93412C48242BBECB0025B4B4 /* View */,
+				93412C4A242BBEF70025B4B4 /* Controller */,
 				93412C34242B9A910025B4B4 /* AppDelegate.swift */,
 				93412C36242B9A910025B4B4 /* SceneDelegate.swift */,
-				93412C38242B9A910025B4B4 /* ViewController.swift */,
-				93412C3A242B9A910025B4B4 /* Main.storyboard */,
 				93412C3D242B9A960025B4B4 /* Assets.xcassets */,
 				93412C3F242B9A960025B4B4 /* LaunchScreen.storyboard */,
 				93412C42242B9A960025B4B4 /* Info.plist */,
 			);
 			path = ZippSlipShadow;
+			sourceTree = "<group>";
+		};
+		93412C48242BBECB0025B4B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93412C3A242B9A910025B4B4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93412C49242BBEED0025B4B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				933678FC24334F7300337432 /* LoginResponse */,
+				933678F824334E6400337432 /* BaseResonse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93412C4A242BBEF70025B4B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93412C38242B9A910025B4B4 /* ViewController.swift */,
+				93412C4B242BBF2E0025B4B4 /* LoginController.swift */,
+				933B5331242FCE5A004BF168 /* ForgotController.swift */,
+				93B687E724346C1800471A14 /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93B687DD24335CE700471A14 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				93B687DE24335E8900471A14 /* NetworkManager.swift */,
+				93B687E024335FD400471A14 /* ServiceResponse.swift */,
+				93B687E22433628500471A14 /* Constent.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		93B687E424337E1700471A14 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				93B687E52433BDD400471A14 /* ProgressUtil.swift */,
+				93B687E92436707800471A14 /* UserDefaults.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		BFAF7D56CD99F9900F789C43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D76AA8BDC488D9005CDAA06 /* Pods_ZippSlipShadow.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93412C45242B9A960025B4B4 /* Build configuration list for PBXNativeTarget "ZippSlipShadow" */;
 			buildPhases = (
+				07B24CE15DDA5E4318E84FF4 /* [CP] Check Pods Manifest.lock */,
 				93412C2D242B9A910025B4B4 /* Sources */,
 				93412C2E242B9A910025B4B4 /* Frameworks */,
 				93412C2F242B9A910025B4B4 /* Resources */,
+				A9AD05ACC3762778ED4B6CD8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +246,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07B24CE15DDA5E4318E84FF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZippSlipShadow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9AD05ACC3762778ED4B6CD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93412C2D242B9A910025B4B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B687E124335FD400471A14 /* ServiceResponse.swift in Sources */,
+				933678F724334A2300337432 /* LoginResponseModel.swift in Sources */,
+				933679012433519F00337432 /* Users.swift in Sources */,
+				933B5332242FCE5A004BF168 /* ForgotController.swift in Sources */,
+				93B687EA2436707800471A14 /* UserDefaults.swift in Sources */,
+				93B687E62433BDD400471A14 /* ProgressUtil.swift in Sources */,
+				933678F924334E6400337432 /* BaseResonse.swift in Sources */,
+				93B687DF24335E8900471A14 /* NetworkManager.swift in Sources */,
 				93412C39242B9A910025B4B4 /* ViewController.swift in Sources */,
+				93412C4C242BBF2E0025B4B4 /* LoginController.swift in Sources */,
+				93B687E32433628500471A14 /* Constent.swift in Sources */,
+				933679032433554500337432 /* DistrictInstitutionModel.swift in Sources */,
+				933678FE24334F9B00337432 /* LoginData.swift in Sources */,
 				93412C35242B9A910025B4B4 /* AppDelegate.swift in Sources */,
 				93412C37242B9A910025B4B4 /* SceneDelegate.swift in Sources */,
+				93B687E824346C1800471A14 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +450,7 @@
 		};
 		93412C46242B9A960025B4B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACE85A85EF4F83E9F080118 /* Pods-ZippSlipShadow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +468,7 @@
 		};
 		93412C47242B9A960025B4B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94917F41F9A084CC28A7B082 /* Pods-ZippSlipShadow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
