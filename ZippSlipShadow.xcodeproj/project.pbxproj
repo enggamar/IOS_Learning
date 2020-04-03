@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03FFE08B657B1714100EF507 /* Pods_ZippSlipShadow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D76AA8BDC488D9005CDAA06 /* Pods_ZippSlipShadow.framework */; };
+		93366D722437AD3D0073200C /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93366D702437AD3D0073200C /* MessageCell.swift */; };
+		93366D732437AD3D0073200C /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93366D712437AD3D0073200C /* MessageCell.xib */; };
 		933678F724334A2300337432 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933678F624334A2300337432 /* LoginResponseModel.swift */; };
 		933678F924334E6400337432 /* BaseResonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933678F824334E6400337432 /* BaseResonse.swift */; };
 		933678FE24334F9B00337432 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933678FD24334F9B00337432 /* LoginData.swift */; };
@@ -30,12 +32,12 @@
 		93B687EE2437238F00471A14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93B687ED2437238E00471A14 /* GoogleService-Info.plist */; };
 		93B687F224375A6000471A14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687F124375A6000471A14 /* Constants.swift */; };
 		93B687F524375F7800471A14 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687F324375CE100471A14 /* ChatMessage.swift */; };
-		93B687FC24376C8D00471A14 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687FA24376C8D00471A14 /* MessageCell.swift */; };
-		93B687FD24376C8D00471A14 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93B687FB24376C8D00471A14 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D76AA8BDC488D9005CDAA06 /* Pods_ZippSlipShadow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZippSlipShadow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93366D702437AD3D0073200C /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		93366D712437AD3D0073200C /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		933678F624334A2300337432 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		933678F824334E6400337432 /* BaseResonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResonse.swift; sourceTree = "<group>"; };
 		933678FD24334F9B00337432 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
@@ -60,8 +62,6 @@
 		93B687ED2437238E00471A14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93B687F124375A6000471A14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		93B687F324375CE100471A14 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
-		93B687FA24376C8D00471A14 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		93B687FB24376C8D00471A14 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		94917F41F9A084CC28A7B082 /* Pods-ZippSlipShadow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZippSlipShadow.release.xcconfig"; path = "Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow.release.xcconfig"; sourceTree = "<group>"; };
 		AACE85A85EF4F83E9F080118 /* Pods-ZippSlipShadow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZippSlipShadow.debug.xcconfig"; path = "Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				93412C3A242B9A910025B4B4 /* Main.storyboard */,
-				93B687FA24376C8D00471A14 /* MessageCell.swift */,
-				93B687FB24376C8D00471A14 /* MessageCell.xib */,
+				93366D702437AD3D0073200C /* MessageCell.swift */,
+				93366D712437AD3D0073200C /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93B687FD24376C8D00471A14 /* MessageCell.xib in Resources */,
+				93366D732437AD3D0073200C /* MessageCell.xib in Resources */,
 				93412C41242B9A960025B4B4 /* LaunchScreen.storyboard in Resources */,
 				93B687EE2437238F00471A14 /* GoogleService-Info.plist in Resources */,
 				93412C3E242B9A960025B4B4 /* Assets.xcassets in Resources */,
@@ -336,7 +336,7 @@
 				933678F924334E6400337432 /* BaseResonse.swift in Sources */,
 				93B687DF24335E8900471A14 /* NetworkManager.swift in Sources */,
 				93B687F524375F7800471A14 /* ChatMessage.swift in Sources */,
-				93B687FC24376C8D00471A14 /* MessageCell.swift in Sources */,
+				93366D722437AD3D0073200C /* MessageCell.swift in Sources */,
 				93412C39242B9A910025B4B4 /* ViewController.swift in Sources */,
 				93412C4C242BBF2E0025B4B4 /* LoginController.swift in Sources */,
 				93B687E32433628500471A14 /* Constent.swift in Sources */,

@@ -47,7 +47,7 @@ class HomeController: UIViewController {
     @IBAction func logoutAction(_ sender: UIBarButtonItem) {
         do{
             try Auth.auth().signOut()
-            
+            navigationController?.setNavigationBarHidden(true, animated: true)
             navigationController?.popToRootViewController(animated: true)
             
         }catch let signOutError as NSError {
