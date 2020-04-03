@@ -27,6 +27,11 @@
 		93B687E62433BDD400471A14 /* ProgressUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E52433BDD400471A14 /* ProgressUtil.swift */; };
 		93B687E824346C1800471A14 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E724346C1800471A14 /* HomeController.swift */; };
 		93B687EA2436707800471A14 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687E92436707800471A14 /* UserDefaults.swift */; };
+		93B687EE2437238F00471A14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93B687ED2437238E00471A14 /* GoogleService-Info.plist */; };
+		93B687F224375A6000471A14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687F124375A6000471A14 /* Constants.swift */; };
+		93B687F524375F7800471A14 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687F324375CE100471A14 /* ChatMessage.swift */; };
+		93B687FC24376C8D00471A14 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B687FA24376C8D00471A14 /* MessageCell.swift */; };
+		93B687FD24376C8D00471A14 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93B687FB24376C8D00471A14 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +55,13 @@
 		93B687E024335FD400471A14 /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
 		93B687E22433628500471A14 /* Constent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constent.swift; sourceTree = "<group>"; };
 		93B687E52433BDD400471A14 /* ProgressUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUtil.swift; sourceTree = "<group>"; };
-		93B687E724346C1800471A14 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		93B687E724346C1800471A14 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		93B687E92436707800471A14 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		93B687ED2437238E00471A14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		93B687F124375A6000471A14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		93B687F324375CE100471A14 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		93B687FA24376C8D00471A14 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		93B687FB24376C8D00471A14 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		94917F41F9A084CC28A7B082 /* Pods-ZippSlipShadow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZippSlipShadow.release.xcconfig"; path = "Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow.release.xcconfig"; sourceTree = "<group>"; };
 		AACE85A85EF4F83E9F080118 /* Pods-ZippSlipShadow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZippSlipShadow.debug.xcconfig"; path = "Target Support Files/Pods-ZippSlipShadow/Pods-ZippSlipShadow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,15 +119,16 @@
 		93412C33242B9A910025B4B4 /* ZippSlipShadow */ = {
 			isa = PBXGroup;
 			children = (
-				93B687E424337E1700471A14 /* utils */,
-				93B687DD24335CE700471A14 /* API */,
 				93412C49242BBEED0025B4B4 /* Model */,
 				93412C48242BBECB0025B4B4 /* View */,
 				93412C4A242BBEF70025B4B4 /* Controller */,
-				93412C34242B9A910025B4B4 /* AppDelegate.swift */,
-				93412C36242B9A910025B4B4 /* SceneDelegate.swift */,
+				93B687EF243759F500471A14 /* Delegate */,
+				93B687DD24335CE700471A14 /* API */,
+				93B687F024375A1300471A14 /* Constants */,
+				93B687E424337E1700471A14 /* utils */,
 				93412C3D242B9A960025B4B4 /* Assets.xcassets */,
 				93412C3F242B9A960025B4B4 /* LaunchScreen.storyboard */,
+				93B687ED2437238E00471A14 /* GoogleService-Info.plist */,
 				93412C42242B9A960025B4B4 /* Info.plist */,
 			);
 			path = ZippSlipShadow;
@@ -127,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				93412C3A242B9A910025B4B4 /* Main.storyboard */,
+				93B687FA24376C8D00471A14 /* MessageCell.swift */,
+				93B687FB24376C8D00471A14 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +149,7 @@
 			children = (
 				933678FC24334F7300337432 /* LoginResponse */,
 				933678F824334E6400337432 /* BaseResonse.swift */,
+				93B687F324375CE100471A14 /* ChatMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +182,23 @@
 				93B687E92436707800471A14 /* UserDefaults.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		93B687EF243759F500471A14 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				93412C34242B9A910025B4B4 /* AppDelegate.swift */,
+				93412C36242B9A910025B4B4 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		93B687F024375A1300471A14 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				93B687F124375A6000471A14 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		BFAF7D56CD99F9900F789C43 /* Frameworks */ = {
@@ -238,7 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B687FD24376C8D00471A14 /* MessageCell.xib in Resources */,
 				93412C41242B9A960025B4B4 /* LaunchScreen.storyboard in Resources */,
+				93B687EE2437238F00471A14 /* GoogleService-Info.plist in Resources */,
 				93412C3E242B9A960025B4B4 /* Assets.xcassets in Resources */,
 				93412C3C242B9A910025B4B4 /* Main.storyboard in Resources */,
 			);
@@ -294,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B687E124335FD400471A14 /* ServiceResponse.swift in Sources */,
+				93B687F224375A6000471A14 /* Constants.swift in Sources */,
 				933678F724334A2300337432 /* LoginResponseModel.swift in Sources */,
 				933679012433519F00337432 /* Users.swift in Sources */,
 				933B5332242FCE5A004BF168 /* ForgotController.swift in Sources */,
@@ -301,6 +335,8 @@
 				93B687E62433BDD400471A14 /* ProgressUtil.swift in Sources */,
 				933678F924334E6400337432 /* BaseResonse.swift in Sources */,
 				93B687DF24335E8900471A14 /* NetworkManager.swift in Sources */,
+				93B687F524375F7800471A14 /* ChatMessage.swift in Sources */,
+				93B687FC24376C8D00471A14 /* MessageCell.swift in Sources */,
 				93412C39242B9A910025B4B4 /* ViewController.swift in Sources */,
 				93412C4C242BBF2E0025B4B4 /* LoginController.swift in Sources */,
 				93B687E32433628500471A14 /* Constent.swift in Sources */,

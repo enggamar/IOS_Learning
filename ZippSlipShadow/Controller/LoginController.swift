@@ -1,6 +1,7 @@
 
 import UIKit
 import SwiftyJSON
+import Firebase
 
 extension UITextField{
 
@@ -29,11 +30,12 @@ class LoginController: UIViewController {
     @IBOutlet weak var userNameField: UITextField!
      @IBOutlet weak var forgetLabel: UILabel!
     @IBOutlet weak var passwordField: UITextField!
+    var userName : String = ""
+    var password: String = ""
     let networkManager = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.hideKeyboardWhenTappedAround()
         initilization()
         let tap = UITapGestureRecognizer(target: self, action: #selector(LoginController.forgetLabelClicked))
@@ -41,6 +43,7 @@ class LoginController: UIViewController {
     }
 
     @objc func initilization(){
+        navigationController?.setNavigationBarHidden(true, animated: false)
         userNameField.setBottomBorder()
                           passwordField.setBottomBorder()
                           passwordField.isSecureTextEntry=true
@@ -56,23 +59,30 @@ class LoginController: UIViewController {
                 if (error != nil) {
                     self.showErrorPopUp(title: "Error", msg: "Usename or passwod is invalid")
                 } else {
-                    self.userNameField.text=""
-                    self.passwordField.text=""
-                    self.performSegue(withIdentifier: "homeScreenNavigation", sender: nil)
-
+                    self.fireBaseLoginAction()
                 }
-            }  )
+            })
         }
     }
     
+    
+    func fireBaseLoginAction() -> Void {
+        Auth.auth().signIn(withEmail: userName, password: password) { authResult, error in
+           if let e = error {
+            self.showErrorPopUp(title: "Error", msg: e as! String)
+            }else {
+            self.performSegue(withIdentifier: Constants.HOME_SEGUE, sender: self)
+            }
+        }
+    }
 
     @objc func forgetLabelClicked(){
-        self.performSegue(withIdentifier: "forgetScreen", sender: self)
+        self.performSegue(withIdentifier: Constants.FORGOT_SEGUE, sender: self)
     }
     
     @objc func validateLogin()-> Bool{
-        let userName = userNameField.text ?? ""
-        let password=passwordField.text ?? ""
+        self.userName = userNameField.text ?? ""
+        self.password=passwordField.text ?? ""
         if (userName.isEmpty) {
             showErrorPopUp(title: "Error",msg: "Please Enter Username")
             return false
@@ -84,12 +94,14 @@ class LoginController: UIViewController {
         return true
     }
 
+    
     @objc func showErrorPopUp(title:String,msg:String){
         
         let alert=UIAlertController(title:title, message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { _ in
-            
         }))
         self.present(alert,animated: true,completion: nil)
+    
     }
+
 }

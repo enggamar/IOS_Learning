@@ -15,7 +15,7 @@ class SplashController: UIViewController {
          // Do any additional setup after loading the view.
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             //This function is used to navigate to Login screen using segue
-            self.performSegue(withIdentifier: "navigate_to_login", sender: self)
+            self.performSegue(withIdentifier: Constants.LOGIN_SEGUE, sender: self)
         }
 
      }

@@ -1,4 +1,4 @@
-q# Uncomment the next line to define a global platform for your project
+# Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'ZippSlipShadow' do
@@ -9,4 +9,7 @@ target 'ZippSlipShadow' do
 
 pod “Alamofire”
 pod "SwiftyJSON"
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+
 end
