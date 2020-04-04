@@ -11,5 +11,6 @@ pod “Alamofire”
 pod "SwiftyJSON"
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod "IQKeyboardManager"
 
 end

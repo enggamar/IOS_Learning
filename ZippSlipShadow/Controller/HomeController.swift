@@ -8,27 +8,55 @@
 
 import UIKit
 import Firebase
-
+import IQKeyboardManager
 class HomeController: UIViewController {
     
 
+    @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var chatTableView: UITableView!
-    
-    var message : [ ChatMessage ] = [
-        ChatMessage(sender : "Amar",body : "Hello!!!!"),
-        ChatMessage(sender : "Testing",body : "Hi!!!!"),
-        ChatMessage(sender : "Quovantis",body : "Whatsapp!!!!"),
-        ChatMessage(sender : "Appinventiv",body : "Hello!!!!")]
-    
+    let db = Firestore.firestore()
+    var message : [ ChatMessage ] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chatTableView.dataSource=self
+        navigationItem.title = Constants.CHAT_SCREEN
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.hidesBackButton=true
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         chatTableView.register(UINib(nibName: Constants.MESSAGE_CELL, bundle: nil), forCellReuseIdentifier: Constants.RESUABLE_CHAT_CELL)
+        loadMessage()
     }
     
+    func loadMessage() {
+        db.collection(Constants.FStore.COLLECTION_NAME)
+            .order(by: Constants.FStore.dateField)
+            .addSnapshotListener { (querySnapShot, error) in
+                
+            if let e = error {
+                
+                print("There was issue in retriving message form firestore \(e)")
+           
+            }else{
+            
+                if let snapShotDocuments = querySnapShot?.documents{
+                    for doc in snapShotDocuments{
+                        let data = doc.data()
+                        if let sender = data[Constants.FStore.SENDER_FIELD] as? String, let messagebody = data[Constants.FStore.BODY_FIELD] as? String {
+                            let messageItem = ChatMessage(sender: sender, body: messagebody)
+                            self.message.append(messageItem)
+                            DispatchQueue.main.async {
+                                self.chatTableView.reloadData()
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         self.showPopUp(title: "Success", msg: "Login Successfully")
@@ -44,6 +72,22 @@ class HomeController: UIViewController {
        }
 
 
+    @IBAction func sendMessageButtonPressed(_ sender: UIButton) {
+        let messageBody =  messageTextField.text
+        let messageSender=Auth.auth().currentUser?.email
+        
+        if let messageBody = messageTextField.text, let messageSender=Auth.auth().currentUser?.email{
+            db.collection(Constants.FStore.COLLECTION_NAME).addDocument(data: [Constants.FStore.SENDER_FIELD:messageSender,Constants.FStore.BODY_FIELD:messageBody,Constants.FStore.dateField: Date().timeIntervalSince1970]) { (error) in
+                if let e = error {
+                    print("There was a issue in saving data in file store,\(e)")
+                }else{
+                    print("Data Saved")
+                }
+            }
+        }
+        
+        
+    }
     @IBAction func logoutAction(_ sender: UIBarButtonItem) {
         do{
             try Auth.auth().signOut()
@@ -55,6 +99,8 @@ class HomeController: UIViewController {
         }
         
     }
+    
+    
 }
 extension HomeController : UITableViewDataSource{
     

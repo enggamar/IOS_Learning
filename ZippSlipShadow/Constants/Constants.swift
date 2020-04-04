@@ -15,4 +15,14 @@ struct Constants{
     static let FORGOT_SEGUE = "forgetScreen"
     static let RESUABLE_CHAT_CELL="reuseableChatCell"
     static let MESSAGE_CELL = "MessageCell"
+    
+    
+    static let CHAT_SCREEN="Chat"
+    
+    struct FStore {
+        static let COLLECTION_NAME = "message"
+        static let SENDER_FIELD = "sender"
+        static let BODY_FIELD = "body"
+        static let dateField = "date"
+    }
 }

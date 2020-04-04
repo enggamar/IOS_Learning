@@ -195,6 +195,9 @@
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="sendMessageButtonPressed:" destination="a5f-8D-3Tf" eventType="touchUpInside" id="aCB-uO-1ab"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -226,6 +229,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chatTableView" destination="txZ-ab-yu2" id="fW7-Pr-ARO"/>
+                        <outlet property="messageTextField" destination="Bkl-jx-5mF" id="tDH-LH-onx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vg-hi-Ah9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
