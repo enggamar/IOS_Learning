@@ -124,11 +124,11 @@ extension HomeController : UITableViewDataSource{
         if messageItem.sender == Auth.auth().currentUser?.email{
             cell.leftImage.isHidden=true
             cell.rightImage.isHidden=false
-            cell.messageBubble.backgroundColor = UIColor(hex: 0x2CA786, alpha: 1)
+            cell.messageBubble.backgroundColor = UIColor(hex: 0x20BEAD, alpha: 1)
         }else {
             cell.leftImage.isHidden=false
             cell.rightImage.isHidden=true
-            cell.messageBubble.backgroundColor = UIColor(hex: 0x2CA786, alpha: 0.2)
+            cell.messageBubble.backgroundColor = UIColor(hex: 0x20BEAD, alpha: 0.2)
             
         }
         return cell

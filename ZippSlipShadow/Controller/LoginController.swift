@@ -55,15 +55,16 @@ class LoginController: UIViewController {
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         
         if (validateLogin()){
-            ProgressUtils.progressDialog.showProgressView()
-            networkManager.doLogin(userName: userNameField.text ?? "", password: passwordField.text ?? "", { (responseObject:JSON?, error:String?) in
-                ProgressUtils.progressDialog.hideProgressView()
-                if (error != nil) {
-                    self.showErrorPopUp(title: "Error", msg: "Usename or passwod is invalid")
-                } else {
-                    self.fireBaseLoginAction()
-                }
-            })
+             self.fireBaseLoginAction()
+//            ProgressUtils.progressDialog.showProgressView()
+//            networkManager.doLogin(userName: userNameField.text ?? "", password: passwordField.text ?? "", { (responseObject:JSON?, error:String?) in
+//                ProgressUtils.progressDialog.hideProgressView()
+//                if (error != nil) {
+//                    self.showErrorPopUp(title: "Error", msg: "Usename or passwod is invalid")
+//                } else {
+//
+//                }
+//            })
         }
     }
     
