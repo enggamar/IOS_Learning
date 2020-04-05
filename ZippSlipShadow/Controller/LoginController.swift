@@ -33,6 +33,8 @@ class LoginController: UIViewController {
     var userName : String = ""
     var password: String = ""
     let networkManager = NetworkManager()
+    let userDefault = UserDefaults.standard
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +73,7 @@ class LoginController: UIViewController {
            if let e = error {
             self.showErrorPopUp(title: "Error", msg: e as! String)
             }else {
+            self.userDefault.set(true, forKey: Constants.UserDefaultKey.IS_LOGIN)
             self.performSegue(withIdentifier: Constants.HOME_SEGUE, sender: self)
             }
         }

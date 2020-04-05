@@ -11,7 +11,9 @@ import UIKit
 class MessageCell: UITableViewCell {
 
     @IBOutlet weak var messageBubble: UIView!
+    @IBOutlet weak var leftImage: UIImageView!
     @IBOutlet weak var messageText: UILabel!
+    @IBOutlet weak var rightImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         messageBubble.layer.cornerRadius=20

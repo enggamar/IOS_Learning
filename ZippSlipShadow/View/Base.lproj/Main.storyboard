@@ -29,11 +29,12 @@
                     <navigationItem key="navigationItem" id="x9y-tk-bRP"/>
                     <connections>
                         <segue destination="VVx-M1-A0J" kind="presentation" identifier="navigate_to_login" modalPresentationStyle="fullScreen" id="KYo-46-bhN"/>
+                        <segue destination="a5f-8D-3Tf" kind="presentation" identifier="homeScreenNavigation" modalPresentationStyle="fullScreen" id="87H-do-sL3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6889.8550724637689" y="-1369.4196428571429"/>
+            <point key="canvasLocation" x="-6833" y="-1369"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="b83-MW-2Hn">
@@ -416,6 +417,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Vtc-In-YzI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXs-OP-0Ns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VVx-M1-A0J" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S2B-B5-8l8">
@@ -434,7 +436,6 @@
                         <segue destination="qcJ-1w-mY4" kind="relationship" relationship="rootViewController" id="diV-l6-eGT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EXs-OP-0Ns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5910.144927536232" y="-1369.4196428571429"/>
         </scene>
@@ -448,4 +449,7 @@
         <image name="paperplane.fill" catalog="system" width="64" height="60"/>
         <image name="zippslip-splash" width="180" height="91"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="87H-do-sL3"/>
+    </inferredMetricsTieBreakers>
 </document>

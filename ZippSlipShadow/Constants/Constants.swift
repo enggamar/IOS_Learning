@@ -23,6 +23,11 @@ struct Constants{
         static let COLLECTION_NAME = "message"
         static let SENDER_FIELD = "sender"
         static let BODY_FIELD = "body"
+        static let DOCUMENT_NAME = "messageCell"
         static let dateField = "date"
+    }
+    
+    struct UserDefaultKey {
+        static let IS_LOGIN  = "IS_LOGIN"
     }
 }
