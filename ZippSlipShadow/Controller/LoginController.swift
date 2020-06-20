@@ -75,7 +75,7 @@ class LoginController: UIViewController {
             self.showErrorPopUp(title: "Error", msg: e as! String)
             }else {
             self.userDefault.set(true, forKey: Constants.UserDefaultKey.IS_LOGIN)
-            self.performSegue(withIdentifier: Constants.HOME_SEGUE, sender: self)
+            self.performSegue(withIdentifier: Constants.TAB_SCREEN, sender: self)
             }
         }
     }

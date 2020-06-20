@@ -9,10 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseableChatCell" rowHeight="62" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="MessageCell" customModule="ZippSlipShadow" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseableChatCell" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="MessageCell" customModule="ZippSlipShadow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="m8n-uJ-YzD">
@@ -23,10 +23,11 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKQ-Sq-xgC">
-                        <rect key="frame" x="55" y="17.5" width="304" height="35"/>
+                        <rect key="frame" x="55" y="6" width="304" height="138"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fvbh bjfb jkf kj n kjkkjc f nkfdhkjvkjv kjnjvjv  gf hgjhg jjh jhgjk " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiy-cf-QeE">
-                                <rect key="frame" x="10" y="5" width="284" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiy-cf-QeE">
+                                <rect key="frame" x="10" y="8" width="284" height="122"/>
+                                <string key="text">fvbh bjfb jkf kj n kjkkjc f nkfdhkjvkjv kjnjvjv  gf hgjhg jjh jhgjk hbjhvbc hjbjhbhjvbjh bhjbvjhb hjbxvhjbcjhbjhxcvbjhxbjvhbxcjhvbb hjbcxj bjchbvhjcbhjcbxjhvbjhcxbjhbxjhbj</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,11 +35,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.018251355739999999" green="0.747610569" blue="0.67973834280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="uiy-cf-QeE" secondAttribute="bottom" constant="5" id="G9B-Pt-ZED"/>
+                            <constraint firstAttribute="bottom" secondItem="uiy-cf-QeE" secondAttribute="bottom" constant="8" id="G9B-Pt-ZED"/>
                             <constraint firstAttribute="trailing" secondItem="uiy-cf-QeE" secondAttribute="trailing" constant="10" id="GOm-Xa-az9"/>
-                            <constraint firstItem="uiy-cf-QeE" firstAttribute="top" secondItem="gKQ-Sq-xgC" secondAttribute="top" constant="5" id="Mdh-Wt-1Du"/>
+                            <constraint firstItem="uiy-cf-QeE" firstAttribute="top" secondItem="gKQ-Sq-xgC" secondAttribute="top" constant="8" id="Mdh-Wt-1Du"/>
                             <constraint firstItem="uiy-cf-QeE" firstAttribute="leading" secondItem="gKQ-Sq-xgC" secondAttribute="leading" constant="10" id="g4c-UU-Wu5"/>
-                            <constraint firstAttribute="height" constant="35" id="pq3-xi-Kwg"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="pq3-xi-Kwg"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="fBH-Jp-BTo">
@@ -62,6 +63,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="leftImage" destination="m8n-uJ-YzD" id="xwK-La-B1g"/>
+                <outlet property="mainChat" destination="H2p-sc-9uM" id="tTm-ya-MRC"/>
                 <outlet property="messageBubble" destination="gKQ-Sq-xgC" id="eRT-DE-oX7"/>
                 <outlet property="messageText" destination="uiy-cf-QeE" id="8D0-eK-Gjs"/>
                 <outlet property="rightImage" destination="fBH-Jp-BTo" id="Eid-A3-TEc"/>

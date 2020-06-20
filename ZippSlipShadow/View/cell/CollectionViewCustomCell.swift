@@ -1,23 +1,18 @@
 //
-//  MessageCell.swift
+//  CollectionViewCustomCell.swift
 //  ZippSlipShadow
 //
-//  Created by Amar Kumar on 03/04/20.
+//  Created by Amar Kumar on 10/04/20.
 //  Copyright © 2020 Amar Kumar. All rights reserved.
 //
 
 import UIKit
 
-class MessageCell: UITableViewCell {
+class CollectionViewCustomCell: UITableViewCell {
 
-    @IBOutlet weak var messageBubble: UIView!
-    @IBOutlet weak var leftImage: UIImageView!
-    @IBOutlet weak var messageText: UILabel!
-    @IBOutlet weak var rightImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        messageBubble.layer.cornerRadius=5
-        
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

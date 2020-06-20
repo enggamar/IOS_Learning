@@ -28,10 +28,16 @@ class HomeController: UIViewController {
         chatTableView.dataSource=self
         navigationItem.title = Constants.CHAT_SCREEN
         navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationItem.hidesBackButton=true
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         chatTableView.register(UINib(nibName: Constants.MESSAGE_CELL, bundle: nil), forCellReuseIdentifier: Constants.RESUABLE_CHAT_CELL)
+      
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        chatTableView.estimatedRowHeight = 100
+        chatTableView.rowHeight = UITableView.automaticDimension
+    }
+    
     
     func loadMessage() {
         db.collection(Constants.FStore.COLLECTION_NAME)
@@ -86,14 +92,9 @@ class HomeController: UIViewController {
                     DispatchQueue.main.async {
                         self.messageTextField.text=""
                     }
-                    
                 }
-                
-                
             }
         }
-        
-        
     }
     @IBAction func logoutAction(_ sender: UIBarButtonItem) {
         do{
@@ -104,10 +105,7 @@ class HomeController: UIViewController {
         }catch let signOutError as NSError {
             print("Error Signing Off: No ",signOutError)
         }
-        
     }
-    
-    
 }
 extension HomeController : UITableViewDataSource{
     
@@ -120,7 +118,8 @@ extension HomeController : UITableViewDataSource{
         let messageItem = message[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.RESUABLE_CHAT_CELL, for: indexPath) as! MessageCell
         cell.messageText.text = message[indexPath.row].body
-
+        cell.messageText.numberOfLines=0
+      
         if messageItem.sender == Auth.auth().currentUser?.email{
             cell.leftImage.isHidden=true
             cell.rightImage.isHidden=false
@@ -129,11 +128,13 @@ extension HomeController : UITableViewDataSource{
             cell.leftImage.isHidden=false
             cell.rightImage.isHidden=true
             cell.messageBubble.backgroundColor = UIColor(hex: 0x20BEAD, alpha: 0.2)
-            
         }
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath)-> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
 extension HomeController : UITableViewDelegate{
